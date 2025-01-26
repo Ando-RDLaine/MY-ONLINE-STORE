@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RD Printing Press</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        
+        /* General styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            color: #333;
+            background-color: #003366; /* Dark blue background */
+            scroll-behavior: smooth;
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: rgb(255, 255, 255); /* Slight transparency */
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 30px;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo-container img {
+            width: 50px;
+            margin-right: 10px;
+        }
+
+        .logo-container span {
+            font-size: 20px;
+            font-weight: bold;
+            color: #003366;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+        }
+
+        nav ul li {
+            margin: 0 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #003366;
+            font-size: 18px;
+            font-weight: bold;
+            position: relative;
+            padding: 10px 15px;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #1E3A8A;
+        }
+
+        /* Section styles */
+        section {
+            position: relative; /* Required for overlay */
+            padding: 100px 30px 50px;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            color: white;
+            z-index: 2; /* Content stays above overlay */
+            background: linear-gradient(to bottom, #ffffff, #006994); /* Background without image */
+        }
+
+        /* Remove overlay opacity */
+        section::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('my logo.png') center center no-repeat;
+            background-size: contain;
+            z-index: -5; /* Keep overlay behind content */
+        }
+
+        .home {
+            background: linear-gradient(to bottom,#060055, #009ac0,#060055);
+        }
+
+        .about {
+            background: linear-gradient(to bottom, #060055, #46caff);
+        }
+
+        .products {
+            background: linear-gradient(to bottom, #060055, #46caff);
+        }
+
+        .promos {
+            background: linear-gradient(to bottom, #060055, #46caff);
+        }
+
+        .contacts {
+            background: linear-gradient(to bottom, #060055, #46caff);
+        }
+
+        h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+            color: white; /* Solid white text */
+        }
+
+        p {
+            font-size: 18px;
+            max-width: 600px;
+            line-height: 1.6;
+            color: white; /* Solid white text */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo-container">
+                <img src="RD LOGO.png" alt="RD Logo">
+                <span>RD PRINTING PRESS</span>
+                
+            </div>
+            <ul>
+                <li><a href="#home"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="#about"><i class="fas fa-users"></i> About Us</a></li>
+                <li><a href="#products"><i class="fas fa-box"></i> Products</a></li>
+                <li><a href="#promos"><i class="fas fa-tags"></i> Promos</a></li>
+                <li><a href="#contacts"><i class="fas fa-envelope"></i> Contacts</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="home">
+        <h1>WELCOME TO RD PRINTING PRESS</h1>
+        <H3>Your Trusted Partner for All Things Printing!</H3>
+        <p style="text-align: justify; font-family: cursive"><br>At RD PRINTING PRESS, we pride ourselves on providing high-quality, reliable printing services that meet the diverse needs of our customers. Whether you're a small business looking to create promotional materials, a student preparing for a big presentation, or an individual searching for custom gifts, we’re here to make your ideas come to life.
+
+            We are a modern printing press that combines cutting-edge technology with old-fashioned customer service to deliver exceptional results. Our team is passionate about helping you achieve your printing goals with precision, creativity, and efficiency. With a wide range of services, we cater to individuals, businesses, schools, and event organizers, offering customized solutions to meet every need.</p>
+    </section>
+
+    <section id="about" class="about">
+        <h1 style="height: auto;">ABOUT US</h1>
+        <h3>RD PRINTING PRESS</h3>
+        <h5>Printing with Precision and Passion</h5>
+        <p style="text-align: justify; font-family: cursive; font-size: 20PX;"><br>At RD PRINTING PRESS, we are more than just a printing press—we are a team of passionate professionals dedicated to bringing your ideas to life through high-quality, custom printing services. Whether you're looking to print personalized t-shirts, create promotional materials for your business, or preserve memories with stunning photo prints, we are here to ensure every detail is perfectly executed.
+            Founded with the vision of providing top-notch printing solutions, [Your Business Name] combines modern technology with old-fashioned customer service to deliver products that exceed expectations. We take great pride in offering a wide range of products and services to meet the diverse needs of individuals, businesses, and organizations.</p>
+    </section>
+
+    
+    <section id="products" class="products">
+        
+        <section id="products" class="products" style="position: relative; overflow: hidden; height: auto; min-height: 100vh;">
+            <!-- Background Overlay -->
+            <div style="
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: url('products.jpg') no-repeat center center;
+                background-size: cover;
+                z-index: 1;">
+            </div>
+        
+            <!-- Content -->
+            <div style="display: flex; justify-content: space-around; flex-wrap: wrap; gap: 20px; margin-top: 30px; position: relative; z-index: 2;">
+                <!-- Category 1 -->
+                <div style="background: rgba(255, 255, 255, 0.8); padding: 20px; border-radius: 10px; width: 30%; text-align: center; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease;">
+                    <h2 style="font-size: 24px; color: #003366; margin-bottom: 10px;">OUR PRODUCTS</h2>
+                </div>
+          
+        
+            <div style="display: flex; justify-content: space-around; flex-wrap: wrap; gap: 20px; margin-top: 30px; position: relative; z-index: 2;">
+                <!-- Category 1 -->
+                <div style="background: rgba(255, 255, 255, 0.8); padding: 20px; border-radius: 10px; width: 30%; text-align: center; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease;">
+                    <h2 style="font-size: 24px; color: #003366; margin-bottom: 10px;">SUBLIMATION TSHIRT</h2>
+                    <p style="font-size: 16px; color: #333; line-height: 1.6; text-align: justify;">Whether you're creating custom t-shirts for a team, event, or just for fun, our sublimation printing technique ensures vibrant, durable designs that won’t fade or crack. Our high-quality shirts and top-notch printing process deliver a perfect product every time.</p>
+                </div>
+        
+                <!-- Category 2 -->
+                <div style="background: rgba(255, 255, 255, 0.8); padding: 20px; border-radius: 10px; width: 30%; text-align: center; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease;">
+                    <h2 style="font-size: 24px; color: #003366; margin-bottom: 10px;">SASHES</h2>
+                    <p style="font-size: 16px; color: #333; line-height: 1.6; text-align: justify;">Looking for the perfect way to make someone feel special or highlight a big event? RD PRINTING PRESS is here to help you create custom sashes that make every occasion unforgettable! Our beautifully crafted sashes are designed to suit any celebration, whether it’s a birthday, graduation, wedding, pageant, or corporate event.</p>
+                </div>
+        
+                <!-- Category 3 -->
+                <div style="background: rgba(255, 255, 255, 0.8); padding: 20px; border-radius: 10px; width: 30%; text-align: center; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease;">
+                    <h2 style="font-size: 24px; color: #003366; margin-bottom: 10px;">RIBBONS</h2>
+                    <p style="font-size: 16px; color: #333; line-height: 1.6; text-align: justify;">Looking for the perfect way to enhance your gifts, decorate your events, or promote your brand? RD PRINTING PRESS specializes in custom printed ribbons that bring a touch of style and sophistication to any occasion. Whether you’re wrapping presents, organizing events, or boosting your business, our ribbons are designed to impress.
+
+                    </p>
+                </div>
+            </div>
+        </section>
+        
+        
+        
+    </section>
+
+    <section id="promos" class="promos">
+        <h1>PROMOS</h1>
+        <p>
+            <LI style="text-align: justify; font-family: cursive; font-size: x-large;">Sublimation Printing on T-Shirts: Create vibrant, custom t-shirts that are built to last. From logos to full designs, our sublimation printing process ensures a perfect result every time.</LI>
+            <LI style="text-align: justify; font-family: cursive; font-size: x-large;">Custom Sashes for Special Events: Whether it’s for a graduation, wedding, or beauty pageant, we offer beautifully printed sashes that make every moment even more memorable.</LI>
+            <LI style="text-align: justify; font-family: cursive; font-size: x-large;">Student Paper Printing: We understand the importance of school projects and papers. Our printing services ensure your student materials are presented in the highest quality.</LI>
+            <LI style="text-align: justify; font-family: cursive; font-size: x-large;">High-Quality Photo Prints: Transform your memories into tangible keepsakes with our premium photo printing services. Perfect for home decor, gifts, and more.</LI>
+            <LI style="text-align: justify; font-family: cursive; font-size: x-large;">Photocopying Services: Quick, reliable photocopying for business and personal use. We offer high-quality prints with fast turnaround times.</LI>
+
+        </p>
+    </section>
+
+    <section id="contacts" class="contacts">
+        <h1>Contact Us</h1>
+        <p style="font-family: cursive; font-size: x-large; text-align: left;">
+            <strong>Contact Info:</strong>
+        </p>
+        <ul style="font-family: cursive; font-size: x-large; text-align: left; list-style: none; padding: 0;">
+            <li><strong>Business Name:</strong> RD PRINTING PRESS</li>
+            <li><strong>Address:</strong> Brangay 1, Apagan, Nasipit, Agusan del Norte, 8602</li>
+            <li><strong>Phone Number:</strong> 09064786036</li>
+            <li><strong>Email Address:</strong> rdprintingpress01@gmail.com</li>
+            <li><strong>Website:</strong> <a href="https://rdprintingpress01.com" target="_blank" style="text-decoration: none;">rdprintingpress01.com</a></li>
+        </ul>
+        
+        <p style="font-family: cursive; font-size: x-large; text-align: left;">
+            <strong>Social Media:</strong>
+        </p>
+        <ul style="font-family: cursive; font-size: x-large; text-align: left; list-style: none; padding: 0;">
+            <li><strong>Facebook:</strong> <a href="https://facebook.com/rdruizando" target="_blank" style="text-decoration: none;">RD Ruiz Ando</a></li>
+        </ul>
+        
+        <p style="font-family: cursive; font-size: x-large; text-align: left;">
+            <strong>Business Hours:</strong>
+        </p>
+        <ul style="font-family: cursive; font-size: x-large; text-align: left; list-style: none; padding: 0;">
+            <li><strong>Monday to Friday:</strong> 8:00 AM - 12:00 AM</li>
+            <li><strong>Saturday:</strong> 10:00 AM - 4:00 PM</li>
+            <li><strong>Sunday:</strong> Whole Day</li>
+        </ul>
+        
+        <p style="font-family: cursive; font-size: x-large; text-align: left;">
+            <strong>Additional Information:</strong>
+        </p>
+        <ul style="font-family: cursive; font-size: x-large; text-align: left; list-style: none; padding: 0;">
+            <li>For urgent inquiries, please call or message us on Facebook.</li>
+        </ul>
+    </section>
+
+    <a href="#home" class="back-to-home">Back to Home</a>
+    
+    
+</body>
+</html>
